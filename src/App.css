@@ -1,0 +1,483 @@
+/* ── Google Fonts ─────────────────────────────────────────────────────────────
+   Space Grotesk: títulos principales
+   JetBrains Mono: versiones, badges, stack técnico
+   ─────────────────────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+
+/* ── Reset y base ──────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: #0d1117;
+  color: #f0f6fc;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Utilidades ────────────────────────────────────────────────────────────── */
+.mono {
+  font-family: "JetBrains Mono", monospace;
+}
+
+.site {
+  background: #0d1117;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── Header ────────────────────────────────────────────────────────────────── */
+.site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 100;
+  transition: background 0.3s, backdrop-filter 0.3s, border-color 0.3s;
+}
+
+.site-header.scrolled {
+  background: rgba(13, 17, 23, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid #21262d;
+}
+
+.header-inner {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  color: #79c0ff;
+  font-size: 14px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-link {
+  color: #8b949e;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: #f0f6fc;
+}
+
+/* ── Botones ───────────────────────────────────────────────────────────────── */
+.btn-primary {
+  background: #79c0ff;
+  color: #0d1117;
+  padding: 6px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+  opacity: 0.88;
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #161b22;
+  border: 1px solid #21262d;
+  color: #f0f6fc;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+
+.btn-ghost:hover {
+  border-color: #484f58;
+}
+
+.btn-github {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f5f7f8;
+  border: 1px solid #21262d;
+  color: #000000;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: border-color 0.2s;
+}
+
+.btn-coral {
+  display: inline-flex;
+  align-items: center;
+  background: #ffa28b;
+  color: #0d1117;
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.btn-coral:hover {
+  opacity: 0.9;
+}
+
+.btn-blue-lg {
+  display: inline-block;
+  background: #79c0ff;
+  color: #0d1117;
+  padding: 14px 36px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+  margin-bottom: 32px;
+}
+
+.btn-blue-lg:hover {
+  opacity: 0.88;
+}
+
+/* ── Hero ──────────────────────────────────────────────────────────────────── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 0 40px;
+}
+
+.badge-available {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  color: #56d364;
+  background: rgba(86, 211, 100, 0.08);
+  border: 1px solid rgba(86, 211, 100, 0.25);
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 28px;
+}
+
+.hero-name {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: clamp(52px, 10vw, 88px);
+  font-weight: 700;
+  line-height: 1.02;
+  color: #f0f6fc;
+  margin-bottom: 24px;
+}
+
+.hero-role {
+  color: #b0bac7;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.hero-bio {
+  color: #b0bac7;
+  font-size: 16px;
+  line-height: 1.75;
+  max-width: 500px;
+  margin-bottom: 40px;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ── Secciones genéricas ───────────────────────────────────────────────────── */
+.section {
+  padding: 80px 0;
+}
+
+.section-sm {
+  padding: 0 0 80px;
+}
+
+.section-eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: clamp(28px, 5vw, 40px);
+  font-weight: 700;
+  color: #f0f6fc;
+}
+
+/* ── Timeline ──────────────────────────────────────────────────────────────── */
+.timeline-wrapper {
+  margin-top: 48px;
+}
+
+.timeline-entry {
+  display: flex;
+  gap: 20px;
+}
+
+.timeline-branch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 16px;
+}
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.timeline-line {
+  width: 2px;
+  flex: 1;
+  background: #21262d;
+  margin-top: 8px;
+}
+
+.timeline-content {
+  padding-bottom: 40px;
+  flex: 1;
+}
+
+.timeline-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.version-badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.timeline-date {
+  color: #b0bac7;
+  font-size: 13px;
+}
+
+.head-badge {
+  font-size: 11px;
+  color: #56d364;
+  background: rgba(86, 211, 100, 0.12);
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.timeline-title {
+  color: #f0f6fc;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.timeline-body {
+  color: #b0bac7;
+  font-size: 14px;
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+
+/* ── Tags ──────────────────────────────────────────────────────────────────── */
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: #161b22;
+  border: 1px solid #292a2c;
+  color: #b0bac7;
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.tag-lg {
+  background: #0d1117;
+  font-size: 13px;
+  padding: 6px 14px;
+}
+
+.tag-accent {
+  background: transparent;
+}
+
+/* ── Proyectos ─────────────────────────────────────────────────────────────── */
+.projects-grid {
+  display: grid;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.project-card {
+  background: #161b22;
+  border: 1px solid #21262d;
+  border-radius: 12px;
+  padding: 24px;
+  cursor: default;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+
+.project-name {
+  color: #f0f6fc;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.project-links {
+  display: flex;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.project-link-muted {
+  color: #b0bac7;
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.2s;
+}
+
+.project-link-muted:hover {
+  color: #f0f6fc;
+}
+
+.project-link-accent {
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.project-desc {
+  color: #b0bac7;
+  font-size: 14px;
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+/* ── Skills ────────────────────────────────────────────────────────────────── */
+.skills-box {
+  background: #161b22;
+  border: 1px solid #21262d;
+  color: #b0bac7;
+  border-radius: 12px;
+  padding: 28px;
+}
+
+.skill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── Contacto ──────────────────────────────────────────────────────────────── */
+.contact-section {
+  text-align: center;
+  padding-bottom: 120px;
+}
+
+.contact-title {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: clamp(32px, 6vw, 52px);
+  font-weight: 700;
+  color: #f0f6fc;
+  margin-bottom: 16px;
+}
+
+.contact-bio {
+  color: #b0bac7;
+  font-size: 16px;
+  max-width: 440px;
+  margin: 0 auto 40px;
+  line-height: 1.75;
+}
+
+.contact-links {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+}
+
+.contact-link {
+  color: #b0bac7;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.contact-link:hover {
+  color: #f0f6fc;
+}
+
+/* ── Accesibilidad: respeta prefers-reduced-motion ─────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ── Responsive: móvil ─────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .header-nav .nav-link {
+    display: none;
+  }
+  .project-header {
+    flex-direction: column;
+  }
+}
