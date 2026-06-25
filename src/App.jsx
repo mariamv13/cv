@@ -59,7 +59,7 @@ const CHANGELOG = [
     version: "v1.0.0",
     date: "2018 – 2022",
     title: "Base sólida: hostelería",
-    body: "Siete años gestionando equipos, clientes y operaciones en tiempo real. Aprendí a trabajar bajo presión, a comunicarme con claridad y a resolver problemas donde el manual no existe.",
+    body: "Cuatro años gestionando equipos, clientes y operaciones en tiempo real. Aprendí a trabajar bajo presión, a comunicarme con claridad y a resolver problemas donde el manual no existe.",
     tags: ["Gestión de equipos", "Atención al cliente", "Resolución de problemas"],
     color: C.yellow,
   },
@@ -94,9 +94,9 @@ const PROJECTS = [
   {
     name: "TakeOne",
     desc: "Red social de cine full-stack (TFG). Perfiles de usuario, chats privados y grupales, sistema de spoilers, motor de sugerencias, grupos de comunidad y panel de administración completo.",
-    tech: ["PHP", "MariaDB", "Bootstrap 5", "jQuery", "InfinityFree"],
+    tech: ["PHP", "JavaScript", "CSS", "MariaDB", "Bootstrap 5", "InfinityFree"],
     live: "https://takeone.gt.tc",
-    gh: "https://github.com/mariamv13",
+    gh: "https://github.com/mariamv13/TakeOne",
     accent: C.coral,
   },
   {
@@ -104,7 +104,7 @@ const PROJECTS = [
     desc: "Buscador de películas en React que consume la API de TMDB. Rutas, paginación, trailers y estética de sala de cine oscura.",
     tech: ["React", "Vite", "TMDB API", "React Router"],
     live: null,
-    gh: "https://github.com/mariamv13",
+    gh: "https://github.com/mariamv13/MovieFinder",
     accent: C.blue,
   },
   {
@@ -112,7 +112,7 @@ const PROJECTS = [
     desc: "Generador de playlists según tu estado de ánimo con la API de Last.fm. Animaciones escalonadas, playlists guardadas en localStorage y enlaces directos a YouTube.",
     tech: ["React", "Vite", "Last.fm API", "CSS animations"],
     live: null,
-    gh: "https://github.com/mariamv13",
+    gh: "https://github.com/mariamv13/Flowlist",
     accent: C.green,
   },
 ];
@@ -182,7 +182,7 @@ function Hero() {
         </Fade>
 
         <Fade delay={200}>
-          <p className="mono hero-role">Desarrolladora Web Junior</p>
+          <p className="mono hero-role" style={{ color: C.yellow }}>Desarrolladora Web Junior</p>
           <p className="hero-bio">
             Desarrollo aplicaciones web con foco en el detalle y en que las cosas funcionen de verdad. Abierta a nuevos retos.
           </p>
@@ -355,7 +355,7 @@ function Projects() {
       <div className="container">
         <Fade>
           <p className="mono section-eyebrow" style={{ color: C.coral }}>
-            PROYECTOS
+            ls ./projects
           </p>
           <h2 className="section-title">Lo que he construido</h2>
         </Fade>
@@ -419,9 +419,8 @@ function Contact() {
             >
               GitHub
             </a>
-            {/* 👇 Añade tu URL de LinkedIn real */}
             <a
-              href="https://linkedin.com/in/tu-perfil"
+              href="https://www.linkedin.com/in/mar%C3%ADa-mart%C3%ADn-v%C3%A9lez-50001b40a/"
               target="_blank"
               rel="noreferrer"
               className="contact-link"
