@@ -9,7 +9,7 @@ const C = {
   blue:    "#79c0ff",
   coral:   "#ffa28b",
   green:   "#56d364",
-  yellow:  "#e3b341",
+  yellow:  "#eabd54",
   text:    "#f0f6fc",
   muted:   "#8b949e",
   dim:     "#30363d",
@@ -406,9 +406,8 @@ function Contact() {
             Estoy buscando mi primer puesto como desarrolladora web. Si crees que encajo en tu
             equipo, escríbeme sin compromiso.
           </p>
-          {/* 👇 Cambia esto por tu email real */}
-          <a href="mailto:tu@email.com" className="btn-blue-lg">
-            Enviar email →
+          <a href="mailto:mmartinvelez13@gmail.com" className="btn-blue-lg">
+            Enviar email <span className="btn-arrow">→</span>
           </a>
           <div className="contact-links">
             <a
